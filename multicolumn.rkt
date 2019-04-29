@@ -317,15 +317,16 @@
       (send body scroll-to localx localy w h refresh? bias))))
 
 (module+ test
-  (define f (new frame% [label "frame"] [width #f] [height 400]))
-  (send f create-status-line)
-  (define t (new multicolumn%
-                 [parent f] [horiz-margin 20]
-                 [columns '(("Title 1\nNext" 70%) ("Title 2\nNext" 30%) ("Title 3" 400))]))
+  (define (demo)
+    (define f (new frame% [label "frame"] [width #f] [height 400]))
+    (send f create-status-line)
+    (define t (new multicolumn%
+                   [parent f] [horiz-margin 20]
+                   [columns '(("Title 1\nNext" 70%) ("Title 2\nNext" 30%) ("Title 3" 400))]))
 
-  (for ([i 15000])
-    (send t add-row (list (format "Str ~a 1" i) (format "Str ~a 2" i) (format "Str ~a 3" i))))
+    (for ([i 15000])
+      (send t add-row (list (format "Str ~a 1" i) (format "Str ~a 2" i) (format "Str ~a 3" i))))
   
-  (send t scroll-to 0 0 1 1 #t)
-  (send f show #t)
+    (send t scroll-to 0 0 1 1 #t)
+    (send f show #t))
   (void))
