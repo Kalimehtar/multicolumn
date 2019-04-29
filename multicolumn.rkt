@@ -328,5 +328,5 @@
       (send t add-row (list (format "Str ~a 1" i) (format "Str ~a 2" i) (format "Str ~a 3" i))))
   
     (send t scroll-to 0 0 1 1 #t)
-    (send f show #t))
-  (void))
+    (send f show #t)
+    (void)))
