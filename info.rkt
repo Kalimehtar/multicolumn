@@ -1,6 +1,6 @@
 #lang info
 (define collection "multicolumn")
-(define deps '("base" "stretchable-snip"))
+(define deps '("base" "stretchable-snip" "gui-lib"))
 ;(define build-deps '("scribble-lib" "racket-doc" "rackunit-lib" "gui-lib"))
 ;(define scribblings '(("scribblings/multicolumn.scrbl" ())))
 (define pkg-desc "Multicolumn table with data AKA grid")
