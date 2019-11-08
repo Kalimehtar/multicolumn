@@ -7,6 +7,8 @@
          racket/match
          racket/class
          racket/list)
+         
+(provide multicolumn%)
 
 (define calculated-columns (make-parameter null))
 
